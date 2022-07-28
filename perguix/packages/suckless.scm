@@ -5,6 +5,7 @@
   #:use-module (gnu packages pkg-config)
 
   #:use-module (guix build-system gnu)
+  #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module ((guix licenses) #:prefix license:))
 
