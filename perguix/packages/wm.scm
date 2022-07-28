@@ -9,6 +9,9 @@
   #:use-module (guix build-system gnu)
   #:use-module (guix git-download)
   #:use-module (guix licenses)
+  #:use-module (guix utils)
+  #:use-module (guix gexp)
+  #:use-module (guix build-system glib-or-gtk)
   #:use-module (guix packages))
 
 (define-public perguix-i3ipc-glib
