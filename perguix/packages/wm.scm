@@ -57,6 +57,9 @@
      (sha256
       (base32 "1s5n8sxrp23h6dcq4bwvv35y06dkzpl10v5vy1kj2x7bfr0cl1rj"))))
    (build-system gnu-build-system)
+   (arguments
+    '(#:phases (modify-phases %standard-phases
+                (delete 'configure))))
    (inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb))
    (native-inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb))
    (home-page "https://github.com/cornerman/i3-easyfocus")
