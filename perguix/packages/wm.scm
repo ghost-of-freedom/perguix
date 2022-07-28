@@ -7,6 +7,9 @@
   #:use-module (gnu packages base)
   #:use-module (gnu packages autotools)
   #:use-module (guix build-system gnu)
+
+  #:use-module (guix build utils)
+  
   #:use-module (guix git-download)
   #:use-module (guix licenses)
   #:use-module (guix utils)
@@ -28,6 +31,12 @@
      (sha256
       (base32 "1gr7cg9qvdpjbjjl6g6sn43hk21xa9wnmlygfqiv9sazyw4ynirl"))))
    (build-system gnu-build-system)
+   (arguments
+    `(#:phases
+      (modify-phases %standard-phases
+       (add-after 'unpack 'autogen
+        (lambda _
+          (invoke (which "sh") "autogen.sh" (string-append "--prefix=" out)))))))
    (inputs
     (list libxcb
           xcb-proto
