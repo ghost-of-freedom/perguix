@@ -22,8 +22,8 @@
     (origin
      (method git-fetch)
      (uri (git-reference
-           (url "https://github.com/altdesktop/i3ipc-glib")
-           (commit (string-append "v" version))))
+           (url "https://github.com/ghost-of-freedom/i3ipc-glib")
+           (commit "ef6d03007f1f1d14d1ab171dc63e02f30f0fa5b3")))
      (file-name (git-file-name name version))
      (sha256
       (base32 "1gr7cg9qvdpjbjjl6g6sn43hk21xa9wnmlygfqiv9sazyw4ynirl"))))
@@ -63,8 +63,8 @@
    (arguments
     '(#:phases (modify-phases %standard-phases
                 (delete 'configure))))
-   (inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb))
-   (native-inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb pkg-config))
+   (inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb libx11))
+   (native-inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb pkg-config libx11))
    (home-page "https://github.com/cornerman/i3-easyfocus")
    (synopsis "Focus and select windows in i3 ")
    (description "Draws a small label ('a'-'z') on top of each visible container, which can be selected by pressing the corresponding key on the keyboard (cancel with ESC). By default, only windows on the current workspace are labelled.")
