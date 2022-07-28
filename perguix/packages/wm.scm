@@ -61,7 +61,7 @@
     '(#:phases (modify-phases %standard-phases
                 (delete 'configure))))
    (inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb))
-   (native-inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb))
+   (native-inputs (list perguix-i3ipc-glib xcb-util-keysyms libxcb pkg-config))
    (home-page "https://github.com/cornerman/i3-easyfocus")
    (synopsis "Focus and select windows in i3 ")
    (description "Draws a small label ('a'-'z') on top of each visible container, which can be selected by pressing the corresponding key on the keyboard (cancel with ESC). By default, only windows on the current workspace are labelled.")
