@@ -28,7 +28,13 @@
      (sha256
       (base32 "1gr7cg9qvdpjbjjl6g6sn43hk21xa9wnmlygfqiv9sazyw4ynirl"))))
    (build-system gnu-build-system)
-   (inputs (list libxcb xcb-proto glib gobject-introspection json-glib gtk-doc))
+   (inputs
+    (list libxcb
+          xcb-proto
+          `(,glib "bin")
+          gobject-introspection
+          json-glib
+          gtk-doc))
    (native-inputs
     (list libxcb
           xcb-proto
