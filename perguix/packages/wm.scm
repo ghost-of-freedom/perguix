@@ -34,9 +34,12 @@
    (arguments
     `(#:phases
       (modify-phases %standard-phases
+       (delete 'configure) ; called by autogen
        (add-after 'unpack 'autogen
-        (lambda _
-          (invoke (which "sh") "autogen.sh" (string-append "--prefix=" out)))))))
+        (lambda* (#:key outputs #:allow-other-keys)
+          (let ((out (assoc-ref outputs "out")))
+            (invoke (which "sh") "autogen.sh" (string-append "--prefix=" out)))
+          #t)))))
    (inputs
     (list libxcb
           xcb-proto
