@@ -8,7 +8,7 @@
   #:use-module (gnu packages autotools)
   #:use-module (guix build-system gnu)
 
-  #:use-module (guix build utils)
+  ;#:use-module (guix build utils)
   
   #:use-module (guix git-download)
   #:use-module (guix licenses)
@@ -38,7 +38,7 @@
        (add-after 'unpack 'autogen
         (lambda* (#:key outputs #:allow-other-keys)
           (let ((out (assoc-ref outputs "out")))
-            (invoke (which "sh") "autogen.sh" (string-append "--prefix=" out)))
+            (invoke "sh" "autogen.sh" (string-append "--prefix=" out)))
           #t)))))
    (inputs
     (list libxcb
