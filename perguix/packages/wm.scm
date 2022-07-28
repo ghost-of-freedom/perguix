@@ -55,10 +55,10 @@
      (method git-fetch)
      (uri (git-reference
            (url "https://github.com/ghost-of-freedom/i3-easyfocus")
-           (commit "77441e8e92b8c8e0077dda2d35a335115835676d")))
+           (commit "e3f998c67b6e4c4b6278ed68bb9a175dd760081d")))
      (file-name (git-file-name name version))
      (sha256
-      (base32 "1s5n8sxrp23h6dcq4bwvv35y06dkzpl10v5vy1kj2x7bfr0cl1rj"))))
+      (base32 "0m9icf2bn7lnkad5smpizai2wryxvbhdsc1vviw1av2x1wb9cmm8"))))
    (build-system gnu-build-system)
    (arguments
     '(#:phases (modify-phases %standard-phases
