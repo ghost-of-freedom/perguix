@@ -32,6 +32,8 @@
     (list libxcb
           xcb-proto
           `(,glib "bin")
+          `(,glib "static")
+          `(,glib "out")
           gobject-introspection
           json-glib
           gtk-doc))
@@ -39,6 +41,8 @@
     (list libxcb
           xcb-proto
           `(,glib "bin") ; for glib-mkenums
+          `(,glib "static")
+          `(,glib "out")
           gobject-introspection
           json-glib
           gtk-doc
