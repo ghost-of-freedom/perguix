@@ -59,10 +59,10 @@
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/ghost-of-freedom/dmenu")
-             (commit "30c3931534dadedff0be760e5d10b2684bdf2a1e")))
+             (commit "0diwy6vg4jyjh9v94f77fz12ws0id4pvslk7k191x82y1nwwg0gk")))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "1kxnzbrw8y5dlwzj70sy8yysdxysphw592m9vnsnbprbss1vk0rg"))))
+        (base32 "0diwy6vg4jyjh9v94f77fz12ws0id4pvslk7k191x82y1nwwg0gk"))))
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f                      ; no tests
@@ -86,5 +86,6 @@
 @item @uref{https://tools.suckless.org/dmenu/patches/center/, center}
 @item @uref{https://tools.suckless.org/dmenu/patches/border/, border}
 @item @uref{https://tools.suckless.org/dmenu/patches/mouse-support/, mouse-support}
+@item @uref{https://tools.suckless.org/dmenu/patches/separator/, separator}
 @end itemize")
     (license license:expat)))
