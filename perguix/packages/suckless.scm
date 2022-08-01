@@ -59,7 +59,7 @@
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/ghost-of-freedom/dmenu")
-             (commit "0diwy6vg4jyjh9v94f77fz12ws0id4pvslk7k191x82y1nwwg0gk")))
+             (commit "06ed8fb86dbfad6233355cb364ff012751368bf0")))
        (file-name (git-file-name name version))
        (sha256
         (base32 "0diwy6vg4jyjh9v94f77fz12ws0id4pvslk7k191x82y1nwwg0gk"))))
