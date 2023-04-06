@@ -19,7 +19,7 @@
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/ghost-of-freedom/st")
-             (commit "124e9e3d3e1fb68cd58517e97c01836c4b9bd192")))
+             (commit "8f81ad829d7d1f044d66d5d11c3d9919f2c86f46")))
        (file-name (git-file-name name version))
        (sha256
         (base32 "1m2b7cj8dlfmr9a2mcyhksc1s12q8byn3vgqdv5v184y9n06lzjc"))))
